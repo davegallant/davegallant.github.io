@@ -1,1 +1,0 @@
-# davegallant.github.io
