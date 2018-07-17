@@ -3,64 +3,54 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://davegallant.github.io/post/first-post/</loc>
+    <loc>/post/2018/07/13/first-post/</loc>
     <lastmod>2018-07-13T08:52:45-04:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://davegallant.github.io/categories/</loc>
-    <changefreq>weekly</changefreq>
+    <loc>/categories/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://davegallant.github.io/</loc>
+    <loc>/tags/golang/</loc>
     <lastmod>2018-07-13T08:52:45-04:00</lastmod>
-    <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://davegallant.github.io/tags/golang/</loc>
+    <loc>/tags/javascript/</loc>
     <lastmod>2018-07-13T08:52:45-04:00</lastmod>
-    <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://davegallant.github.io/tags/javascript/</loc>
+    <loc>/post/</loc>
     <lastmod>2018-07-13T08:52:45-04:00</lastmod>
-    <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://davegallant.github.io/post/</loc>
+    <loc>/tags/python/</loc>
     <lastmod>2018-07-13T08:52:45-04:00</lastmod>
-    <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://davegallant.github.io/tags/python/</loc>
+    <loc>/categories/random/</loc>
     <lastmod>2018-07-13T08:52:45-04:00</lastmod>
-    <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://davegallant.github.io/categories/random/</loc>
+    <loc>/tags/</loc>
     <lastmod>2018-07-13T08:52:45-04:00</lastmod>
-    <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://davegallant.github.io/tags/</loc>
+    <loc>/</loc>
     <lastmod>2018-07-13T08:52:45-04:00</lastmod>
-    <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
