@@ -6,10 +6,21 @@
     <description>Recent content in Posts on davegallant.github.io - tech micro-blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 13 Jul 2018 08:52:45 -0400</lastBuildDate>
+    <lastBuildDate>Wed, 18 Jul 2018 20:48:15 -0400</lastBuildDate>
     
 	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Why Learn Python?</title>
+      <link>/post/2018/07/18/why-learn-python/</link>
+      <pubDate>Wed, 18 Jul 2018 20:48:15 -0400</pubDate>
+      
+      <guid>/post/2018/07/18/why-learn-python/</guid>
+      <description>&lt;p&gt;Python is a high-level, general-purpose language that has a wide range of use cases from the mundanely simple to the increasingly complex.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>First Post</title>
