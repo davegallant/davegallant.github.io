@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+     <script type="application/ld+json">
+{
+    "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "/"
+    },
+    "articleSection" : "post",
+    "name" : "Why Learn Python?",
+    "headline" : "Why Learn Python?",
+    "description" : "<p>Python is a high-level, general-purpose language that has a wide range of use cases from the mundanely simple to the increasingly complex.</p>
+
+<p></p>",
+    "inLanguage" : "en-US",
+    "author" : "",
+    "creator" : "",
+    "publisher": "",
+    "accountablePerson" : "",
+    "copyrightHolder" : "",
+    "copyrightYear" : "2018",
+    "datePublished": "2018-07-18 20:48:15 -0400 EDT",
+    "dateModified" : "2018-07-18 20:48:15 -0400 EDT",
+    "url" : "/blog/2018/07/18/why-learn-python/",
+    "wordCount" : "295",
+    "keywords" : [ "python","pip","Blog" ]
+}
+</script>
+    <title>Why Learn Python?</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B"
+      crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/style.css" />
+    
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-98710982-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+</head>
+
+  <body>
+    <nav>
+    <ul class="menu">
+      
+      <li><a class="btn btn-outline-dark" href="/">Home</a></li>
+      
+      <li><a class="btn btn-outline-dark" href="/about/">About</a></li>
+      
+      <li><a class="btn btn-outline-dark" href="/categories/">Categories</a></li>
+      
+      <li><a class="btn btn-outline-dark" href="/tags/">Tags</a></li>
+      
+      <li><a class="btn btn-outline-dark" href="/index.xml">Subscribe</a></li>
+      
+    </ul>
+    <hr/>
+    </nav>
+
+<div class="article-meta">
+<h1><span class="title">Why Learn Python?</span></h1>
+<h2 class="author">Dave Gallant</h2>
+<h2 class="date">2018/07/18</h2>
+</div>
+
+<main>
+<p>Python is a high-level, general-purpose language that has a wide range of use cases from the mundanely simple to the increasingly complex.</p>
+
+<p></p>
+
+<ul>
+<li>Glue script?</li>
+<li>Web crawling?</li>
+<li>Web server?</li>
+<li>Testing?</li>
+<li>Micro-service?</li>
+<li>Network automation?</li>
+<li>Data Science?</li>
+<li>Machine Learning?</li>
+</ul>
+
+<p>Python is likely a quick way to get any of these tasks done.</p>
+
+<p>Including the abundant number of packages that can be found on <a href="https://pypi.org/">Python Package Index</a>, there is likely a package that can help you.</p>
+
+<p>Do you want to download a webpage?</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">pip install requests</code></pre></div>
+
+<p>and then invoke the <a href="https://docs.python.org/3/tutorial/interpreter.html">Python interpreter</a>:</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">Python <span style="color:#ae81ff">3.7</span><span style="color:#f92672">.</span><span style="color:#ae81ff">0</span> (default, Jun <span style="color:#ae81ff">29</span> <span style="color:#ae81ff">2018</span>, <span style="color:#ae81ff">21</span>:<span style="color:#ae81ff">56</span>:<span style="color:#ae81ff">58</span>)
+[GCC <span style="color:#ae81ff">7.3</span><span style="color:#f92672">.</span><span style="color:#ae81ff">0</span>] on linux
+Type <span style="color:#e6db74">&#34;help&#34;</span>, <span style="color:#e6db74">&#34;copyright&#34;</span>, <span style="color:#e6db74">&#34;credits&#34;</span> <span style="color:#f92672">or</span> <span style="color:#e6db74">&#34;license&#34;</span> <span style="color:#66d9ef">for</span> more information<span style="color:#f92672">.</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#f92672">import</span> requests
+<span style="color:#f92672">&gt;&gt;&gt;</span> requests<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;https://www.theregister.co.uk/&#39;</span>)<span style="color:#f92672">.</span>text</code></pre></div>
+
+<p>After that, there is any number of things that can be done with the results.</p>
+
+<p>As you can probably note, the syntax is simple and clean, which makes returning to your code months later less of a jarring experience.</p>
+
+<h2 id="popularity">Popularity</h2>
+
+<p>According to <a href="https://insights.stackoverflow.com/survey/2018/">Stack Overflow Stats</a>, Python has surpassed C# and PHP in popularity and is the 3rd most loved language, after Rust and Kotlin. Interestingly, it is &ldquo;the most wanted language&rdquo; for the second year in a row.</p>
+
+<h2 id="drawbacks">Drawbacks</h2>
+
+<p>Is Python the magical solution to all the world&rsquo;s problems? No.</p>
+
+<p>Python is not very suitable for much of the following:</p>
+
+<ul>
+<li>Static typing</li>
+<li>Performance-critical application (i.e. graphically-intense video game)</li>
+<li>Mobile app development</li>
+<li>Front-end web development</li>
+</ul>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>So should you learn it? or stick with shell scripting?</p>
+
+<p>Because of Python&rsquo;s simple syntax, dynamic typing and abundant Package Index, it makes the language a great asset to have in your toolchain.</p>
+
+<p>And it hasn&rsquo;t hurt that giants like Google, Facebook and Microsoft have invested heavily in Python.</p>
+
+<h2 id="resources">Resources</h2>
+
+<p>This list includes some truly remarkable resources for improving your Python:</p>
+
+<ul>
+<li><p><a href="https://www.realpython.com">https://www.realpython.com</a></p></li>
+
+<li><p><a href="https://pythonbytes.fm/">https://pythonbytes.fm/</a> (podcast)</p></li>
+
+<li><p><a href="https://talkpython.fm/">https://talkpython.fm/</a> (podcast)</p></li>
+
+<li><p><a href="https://awesome-python.com/">https://awesome-python.com/</a></p></li>
+</ul>
+</main>
+
+  <footer>
+  
+  
+  <hr/>
+  &copy; Dave Gallant 2018 | <a href="https://github.com/davegallant">Github</a> | <a href="https://twitter.com/__dave_g__">Twitter</a>
+  
+  </footer>
+  </body>
+</html>
+

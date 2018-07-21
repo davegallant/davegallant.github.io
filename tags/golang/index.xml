@@ -13,10 +13,10 @@
     
     <item>
       <title>First Post</title>
-      <link>/post/2018/07/13/first-post/</link>
+      <link>/blog/2018/07/13/first-post/</link>
       <pubDate>Fri, 13 Jul 2018 08:52:45 -0400</pubDate>
       
-      <guid>/post/2018/07/13/first-post/</guid>
+      <guid>/blog/2018/07/13/first-post/</guid>
       <description>Hello. My plan is to pour useful code snippets, tips and tricks into these pages. I have a fond interest in programming (especially with Python, TypeScript and Golang). Hopefully something within these pages will help you out in your journey.</description>
     </item>
     
