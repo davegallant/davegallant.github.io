@@ -25,7 +25,7 @@
     "datePublished": "2020-03-16 22:00:15 -0400 EDT",
     "dateModified" : "2020-03-16 22:00:15 -0400 EDT",
     "url" : "\/blog\/2020\/03\/16\/appgate-sdp-on-arch-linux\/",
-    "wordCount" : "491",
+    "wordCount" : "507",
     "keywords" : [ "linux","vpn","python","Blog" ]
 }
 </script>
@@ -153,9 +153,10 @@ module <span style="color:#e6db74">&#39;platform&#39;</span> has no attribute <s
 </code></pre></div><p>Aha! So this is in the local AppGate source code. This should be an easy fix. Let&rsquo;s just replace this line with:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">if</span> True: <span style="color:#75715e"># Since we are not using Fedora :)</span>
 </code></pre></div><h1 id="conclusion">Conclusion</h1>
-<p>It turns out there are <a href="https://github.com/pymssql/pymssql/pull/659">breaking changes</a> in Python3.8</p>
+<p>It turns out there are <a href="https://docs.python.org/3.7/library/platform.html#platform.linux_distribution">breaking changes</a> in Python3.8.</p>
+<p>The docs that say <code>Deprecated since version 3.5, will be removed in version 3.8: See alternative like the distro package.</code></p>
 <p>I guess this highlights one of the caveats of relying upon system python.</p>
-<p>Enjoy your safe, Zero-Trust networking.</p>
+<p>Enjoy.</p>
 </main>
 
   <footer>
