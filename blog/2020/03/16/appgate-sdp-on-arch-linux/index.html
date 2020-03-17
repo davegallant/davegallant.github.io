@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+     <script type="application/ld+json">
+{
+    "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "\/"
+    },
+    "articleSection" : "post",
+    "name" : "AppGate SDP on Arch Linux",
+    "headline" : "AppGate SDP on Arch Linux",
+    "description" : "\x3cp\x3eAppGate SDP provides a Zero Trust network. This post describes how to get AppGate SDP \x3ccode\x3e4.3.2\x3c\/code\x3e working on Arch Linux.\x3c\/p\x3e",
+    "inLanguage" : "en-US",
+    "author" : "",
+    "creator" : "",
+    "publisher": "",
+    "accountablePerson" : "",
+    "copyrightHolder" : "",
+    "copyrightYear" : "2020",
+    "datePublished": "2020-03-16 22:00:15 -0400 EDT",
+    "dateModified" : "2020-03-16 22:00:15 -0400 EDT",
+    "url" : "\/blog\/2020\/03\/16\/appgate-sdp-on-arch-linux\/",
+    "wordCount" : "491",
+    "keywords" : [ "linux","vpn","python","Blog" ]
+}
+</script>
+    <title>AppGate SDP on Arch Linux</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B"
+      crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/style.css" />
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-98710982-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+</head>
+
+  <body>
+    <nav>
+    <ul class="menu">
+      
+      <li><a class="btn btn-outline-dark" href="/">Home</a></li>
+      
+      <li><a class="btn btn-outline-dark" href="/about/">About</a></li>
+      
+      <li><a class="btn btn-outline-dark" href="/categories/">Categories</a></li>
+      
+      <li><a class="btn btn-outline-dark" href="/tags/">Tags</a></li>
+      
+      <li><a class="btn btn-outline-dark" href="/index.xml">Subscribe</a></li>
+      
+    </ul>
+    <hr/>
+    </nav>
+
+<div class="article-meta">
+<h1><span class="title">AppGate SDP on Arch Linux</span></h1>
+<h2 class="author">Dave Gallant
+ 2020/03/16</h2>
+</div>
+
+<main>
+<p>AppGate SDP provides a Zero Trust network. This post describes how to get AppGate SDP <code>4.3.2</code> working on Arch Linux.</p>
+<p>Depending on the AppGate SDP Server that is running, you may require a client that is more recent than the latest package on <a href="https://aur.archlinux.org/packages/appgate-sdp/">AUR</a>.
+As of right now, the latest AUR is <code>4.2.2-1</code>.</p>
+<p>These steps highlight how to get it working with <code>Python3.8</code> by making a 1 line modification to AppGate source code.</p>
+<h1 id="package">Package</h1>
+<p>We already know the community package is out of date, so let&rsquo;s clone it:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">git clone https://aur.archlinux.org/appgate-sdp.git
+cd appgate-sdp
+</code></pre></div><p>You&rsquo;ll likely notice that the version is not what we want, so let&rsquo;s modify the <code>PKGBUILD</code> to the following:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e"># Maintainer: Pawel Mosakowski &lt;pawel at mosakowski dot net&gt;</span>
+pkgname<span style="color:#f92672">=</span>appgate-sdp
+conflicts<span style="color:#f92672">=(</span><span style="color:#e6db74">&#39;appgate-sdp-headless&#39;</span><span style="color:#f92672">)</span>
+pkgver<span style="color:#f92672">=</span>4.3.2
+_download_pkgver<span style="color:#f92672">=</span>4.3
+pkgrel<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>
+epoch<span style="color:#f92672">=</span>
+pkgdesc<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Software Defined Perimeter - GUI client&#34;</span>
+arch<span style="color:#f92672">=(</span><span style="color:#e6db74">&#39;x86_64&#39;</span><span style="color:#f92672">)</span>
+url<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://www.cyxtera.com/essential-defense/appgate-sdp/support&#34;</span>
+license<span style="color:#f92672">=(</span><span style="color:#e6db74">&#39;custom&#39;</span><span style="color:#f92672">)</span>
+<span style="color:#75715e"># dependecies calculated by namcap</span>
+depends<span style="color:#f92672">=(</span><span style="color:#e6db74">&#39;gconf&#39;</span> <span style="color:#e6db74">&#39;libsecret&#39;</span> <span style="color:#e6db74">&#39;gtk3&#39;</span> <span style="color:#e6db74">&#39;python&#39;</span> <span style="color:#e6db74">&#39;nss&#39;</span> <span style="color:#e6db74">&#39;libxss&#39;</span> <span style="color:#e6db74">&#39;nodejs&#39;</span> <span style="color:#e6db74">&#39;dnsmasq&#39;</span><span style="color:#f92672">)</span>
+source<span style="color:#f92672">=(</span><span style="color:#e6db74">&#34;https://sdpdownloads.cyxtera.com/AppGate-SDP-</span><span style="color:#e6db74">${</span>_download_pkgver<span style="color:#e6db74">}</span><span style="color:#e6db74">/clients/</span><span style="color:#e6db74">${</span>pkgname<span style="color:#e6db74">}</span><span style="color:#e6db74">_</span><span style="color:#e6db74">${</span>pkgver<span style="color:#e6db74">}</span><span style="color:#e6db74">_amd64.deb&#34;</span>
+        <span style="color:#e6db74">&#34;appgatedriver.service&#34;</span><span style="color:#f92672">)</span>
+options<span style="color:#f92672">=(</span>staticlibs<span style="color:#f92672">)</span>
+prepare<span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+    tar -xf data.tar.xz
+<span style="color:#f92672">}</span>
+package<span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+    cp -dpr <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>srcdir<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>/<span style="color:#f92672">{</span>etc,lib,opt,usr<span style="color:#f92672">}</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>pkgdir<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>
+    mv -v <span style="color:#e6db74">&#34;</span>$pkgdir<span style="color:#e6db74">/lib/systemd/system&#34;</span> <span style="color:#e6db74">&#34;</span>$pkgdir<span style="color:#e6db74">/usr/lib/systemd/&#34;</span>
+    rm -vrf <span style="color:#e6db74">&#34;</span>$pkgdir<span style="color:#e6db74">/lib&#34;</span>
+    cp -v <span style="color:#e6db74">&#34;</span>$srcdir<span style="color:#e6db74">/appgatedriver.service&#34;</span> <span style="color:#e6db74">&#34;</span>$pkgdir<span style="color:#e6db74">/usr/lib/systemd/system/appgatedriver.service&#34;</span>
+    mkdir -vp <span style="color:#e6db74">&#34;</span>$pkgdir<span style="color:#e6db74">/usr/share/licenses/appgate-sdp&#34;</span>
+    cp -v <span style="color:#e6db74">&#34;</span>$pkgdir<span style="color:#e6db74">/usr/share/doc/appgate/copyright&#34;</span> <span style="color:#e6db74">&#34;</span>$pkgdir<span style="color:#e6db74">/usr/share/licenses/appgate-sdp&#34;</span>
+    cp -v <span style="color:#e6db74">&#34;</span>$pkgdir<span style="color:#e6db74">/usr/share/doc/appgate/LICENSE.github&#34;</span> <span style="color:#e6db74">&#34;</span>$pkgdir<span style="color:#e6db74">/usr/share/licenses/appgate-sdp&#34;</span>
+    cp -v <span style="color:#e6db74">&#34;</span>$pkgdir<span style="color:#e6db74">/usr/share/doc/appgate/LICENSES.chromium.html.bz2&#34;</span> <span style="color:#e6db74">&#34;</span>$pkgdir<span style="color:#e6db74">/usr/share/licenses/appgate-sdp&#34;</span>
+<span style="color:#f92672">}</span>
+md5sums<span style="color:#f92672">=(</span><span style="color:#e6db74">&#39;17101aac7623c06d5fbb95f50cf3dbdc&#39;</span>
+         <span style="color:#e6db74">&#39;002644116e20b2d79fdb36b7677ab4cf&#39;</span><span style="color:#f92672">)</span>
+
+</code></pre></div><p>Let&rsquo;s first make sure we have some dependencies. If you do not have <a href="https://github.com/Jguer/yay">yay</a>, check it out.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">yay -S dnsmasq gconf
+</code></pre></div><p>Now, let&rsquo;s install it:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">makepkg -si
+</code></pre></div><h1 id="run">Run</h1>
+<p>Ok, let&rsquo;s run the client by executing <code>appgate</code>.</p>
+<p>It complains about not being able to connect.</p>
+<p>Easy fix:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo systemctl start appgatedriver.service
+</code></pre></div><p>Now we should be connected&hellip; but DNS is not working?</p>
+<h1 id="fix-dns">Fix DNS</h1>
+<p>Running <code>resolvectl</code> should display that something is not right.</p>
+<p>Why is the DNS not being set by appgate?</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ head -3 /opt/appgate/linux/set_dns
+<span style="color:#75715e">#!/usr/bin/env python3</span>
+<span style="color:#e6db74">&#39;&#39;</span><span style="color:#960050;background-color:#1e0010">&#39;</span>
+This is used to set and unset the DNS.
+</code></pre></div><p>It seems like python3 is required for the DNS setting to happen.
+Let&rsquo;s try to run it.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ sudo /opt/appgate/linux/set_dns
+/opt/appgate/linux/set_dns:88: SyntaxWarning: <span style="color:#e6db74">&#34;is&#34;</span> with a literal. Did you mean <span style="color:#e6db74">&#34;==&#34;</span>?
+  servers <span style="color:#f92672">=</span> <span style="color:#f92672">[(</span> socket.AF_INET <span style="color:#66d9ef">if</span> x.version is <span style="color:#ae81ff">4</span> <span style="color:#66d9ef">else</span> socket.AF_INET6, map<span style="color:#f92672">(</span>int, x.packed<span style="color:#f92672">))</span> <span style="color:#66d9ef">for</span> x in servers<span style="color:#f92672">]</span>
+Traceback <span style="color:#f92672">(</span>most recent call last<span style="color:#f92672">)</span>:
+  File <span style="color:#e6db74">&#34;/opt/appgate/linux/set_dns&#34;</span>, line 30, in &lt;module&gt;
+    import dbus
+ModuleNotFoundError: No module named <span style="color:#e6db74">&#39;dbus&#39;</span>
+</code></pre></div><p>Ok, let&rsquo;s install it:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ sudo python3.8 -m pip install dbus-python
+</code></pre></div><p>It should work now&hellip; right?</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ sudo /opt/appgate/linux/set_dns
+/opt/appgate/linux/set_dns:88: SyntaxWarning: <span style="color:#e6db74">&#34;is&#34;</span> with a literal. Did you mean <span style="color:#e6db74">&#34;==&#34;</span>?
+  servers <span style="color:#f92672">=</span> <span style="color:#f92672">[(</span> socket.AF_INET <span style="color:#66d9ef">if</span> x.version is <span style="color:#ae81ff">4</span> <span style="color:#66d9ef">else</span> socket.AF_INET6, map<span style="color:#f92672">(</span>int, x.packed<span style="color:#f92672">))</span> <span style="color:#66d9ef">for</span> x in servers<span style="color:#f92672">]</span>
+module <span style="color:#e6db74">&#39;platform&#39;</span> has no attribute <span style="color:#e6db74">&#39;linux_distribution&#39;</span>
+</code></pre></div><p>This is a breaking change in Python3.8.</p>
+<p>So what is calling <code>platform.linux_distribution</code>?</p>
+<p>Let&rsquo;s search for it:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ sudo grep -r <span style="color:#e6db74">&#39;linux_distribution&#39;</span> /opt/appgate/linux/
+/opt/appgate/linux/nm.py:    <span style="color:#66d9ef">if</span> platform.linux_distribution<span style="color:#f92672">()[</span>0<span style="color:#f92672">]</span> !<span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Fedora&#39;</span>:
+</code></pre></div><p>Aha! So this is in the local AppGate source code. This should be an easy fix. Let&rsquo;s just replace this line with:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">if</span> True: <span style="color:#75715e"># Since we are not using Fedora :)</span>
+</code></pre></div><h1 id="conclusion">Conclusion</h1>
+<p>It turns out there are <a href="https://github.com/pymssql/pymssql/pull/659">breaking changes</a> in Python3.8</p>
+<p>I guess this highlights one of the caveats of relying upon system python.</p>
+<p>Enjoy your safe, Zero-Trust networking.</p>
+</main>
+
+  <footer>
+  
+  
+  <hr/>
+  © Dave Gallant 2020 | <a href="https://github.com/davegallant">Github</a> | <a href="https://twitter.com/dgallant0">Twitter</a>
+  
+  </footer>
+  </body>
+</html>
+

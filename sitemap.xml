@@ -1,78 +1,54 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/blog/2018/07/18/why-learn-python/</loc>
-    <lastmod>2018-07-18T20:48:15-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/blog/2018/07/13/first-post/</loc>
-    <lastmod>2018-07-13T08:52:45-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/about/</loc>
+    <loc>/blog/2020/03/16/appgate-sdp-on-arch-linux/</loc>
+    <lastmod>2020-03-16T22:00:15-04:00</lastmod>
   </url>
   
   <url>
     <loc>/categories/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/golang/</loc>
-    <lastmod>2018-07-13T08:52:45-04:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/javascript/</loc>
-    <lastmod>2018-07-13T08:52:45-04:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/pip/</loc>
-    <lastmod>2018-07-18T20:48:15-04:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/post/</loc>
-    <lastmod>2018-07-18T20:48:15-04:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/categories/python/</loc>
-    <lastmod>2018-07-18T20:48:15-04:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/python/</loc>
-    <lastmod>2018-07-18T20:48:15-04:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/categories/random/</loc>
-    <lastmod>2018-07-13T08:52:45-04:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/</loc>
-    <lastmod>2018-07-13T08:52:45-04:00</lastmod>
-    <priority>0</priority>
+    <lastmod>2020-03-16T22:00:15-04:00</lastmod>
   </url>
   
   <url>
     <loc>/</loc>
-    <lastmod>2018-07-18T20:48:15-04:00</lastmod>
-    <priority>0</priority>
+    <lastmod>2020-03-16T22:00:15-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/linux/</loc>
+    <lastmod>2020-03-16T22:00:15-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/categories/linux/</loc>
+    <lastmod>2020-03-16T22:00:15-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/</loc>
+    <lastmod>2020-03-16T22:00:15-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/python/</loc>
+    <lastmod>2020-03-16T22:00:15-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
+    <lastmod>2020-03-16T22:00:15-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/vpn/</loc>
+    <lastmod>2020-03-16T22:00:15-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/about/</loc>
   </url>
   
 </urlset>

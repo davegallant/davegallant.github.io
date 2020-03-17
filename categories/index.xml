@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on davegallant.github.io - tech micro-blog</title>
@@ -6,25 +6,17 @@
     <description>Recent content in Categories on davegallant.github.io - tech micro-blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <lastBuildDate>Mon, 16 Mar 2020 22:00:15 -0400</lastBuildDate>
     
 	<atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Python</title>
-      <link>/categories/python/</link>
-      <pubDate>Wed, 18 Jul 2018 20:48:15 -0400</pubDate>
+      <title>linux</title>
+      <link>/categories/linux/</link>
+      <pubDate>Mon, 16 Mar 2020 22:00:15 -0400</pubDate>
       
-      <guid>/categories/python/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Random</title>
-      <link>/categories/random/</link>
-      <pubDate>Fri, 13 Jul 2018 08:52:45 -0400</pubDate>
-      
-      <guid>/categories/random/</guid>
+      <guid>/categories/linux/</guid>
       <description></description>
     </item>
     

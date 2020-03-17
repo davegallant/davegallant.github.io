@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on davegallant.github.io - tech micro-blog</title>
@@ -6,44 +6,35 @@
     <description>Recent content in Tags on davegallant.github.io - tech micro-blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 13 Jul 2018 08:52:45 -0400</lastBuildDate>
+    <lastBuildDate>Mon, 16 Mar 2020 22:00:15 -0400</lastBuildDate>
     
 	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Golang</title>
-      <link>/tags/golang/</link>
-      <pubDate>Fri, 13 Jul 2018 08:52:45 -0400</pubDate>
+      <title>linux</title>
+      <link>/tags/linux/</link>
+      <pubDate>Mon, 16 Mar 2020 22:00:15 -0400</pubDate>
       
-      <guid>/tags/golang/</guid>
+      <guid>/tags/linux/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Javascript</title>
-      <link>/tags/javascript/</link>
-      <pubDate>Fri, 13 Jul 2018 08:52:45 -0400</pubDate>
-      
-      <guid>/tags/javascript/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Pip</title>
-      <link>/tags/pip/</link>
-      <pubDate>Wed, 18 Jul 2018 20:48:15 -0400</pubDate>
-      
-      <guid>/tags/pip/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Python</title>
+      <title>python</title>
       <link>/tags/python/</link>
-      <pubDate>Wed, 18 Jul 2018 20:48:15 -0400</pubDate>
+      <pubDate>Mon, 16 Mar 2020 22:00:15 -0400</pubDate>
       
       <guid>/tags/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>vpn</title>
+      <link>/tags/vpn/</link>
+      <pubDate>Mon, 16 Mar 2020 22:00:15 -0400</pubDate>
+      
+      <guid>/tags/vpn/</guid>
       <description></description>
     </item>
     
